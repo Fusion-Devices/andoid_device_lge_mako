@@ -30,8 +30,8 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=mako lpj=
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 
 # Try to build the kernel
-TARGET_KERNEL_SOURCE := kernel/google/msm
-TARGET_KERNEL_CONFIG := cyanogen_mako_defconfig
+TARGET_KERNEL_SOURCE := kernel/lge/mako
+TARGET_KERNEL_CONFIG := quanta_defconfig
 
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_LEGACY_ALSA_AUDIO:= false
@@ -158,3 +158,27 @@ MALLOC_IMPL := dlmalloc
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 BOARD_HARDWARE_CLASS := device/lge/mako/cmhw/
+
+FUSION_OPT := true
+FUSION_OFAST := true
+FUSION_STRICT := true
+FUSION_KRAIT := true
+FUSION_GRAPHITE := true
+FUSION_PIPE := true
+FUSION_ENABLE_GCCONLY := true 
+FLOOP_NEST_OPTIMIZE := true
+FUSION_FFAST_MATH := true
+TARGET_FUSION_ROM := 4.9
+TARGET_FUSION_KERNEL := 4.9-sm
+
+TARGET_USE_ION_COMPAT := true
+
+TARGET_RECOVERY_DEVICE_DIRS := device/lge/mako
+DEVICE_RESOLUTION := 1280x768
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_L_CRYPTO := true 
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true 
+TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
+TW_SCREEN_BLANK_ON_BOOT := true
+TARGET_RECOVERY_FSTAB = device/lge/mako/fstab.mako
